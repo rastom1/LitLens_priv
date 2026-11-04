@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0",
+  "request_id": "req_b20c4e18",
+  "status": "complete",
+  "model": {
+    "name": "litlens-bert-adapter",
+    "version": "0.3.1-mock",
+    "component_head": "claim/premise/none",
+    "relation_head": "support/attack/none"
+  },
+  "latency_ms": 2876,
+  "warnings": [
+    {
+      "code": "LOW_CONFIDENCE",
+      "message": "1 relation scored below 0.60.",
+      "ids": [
+        "R8"
+      ]
+    }
+  ],
+  "article": {
+    "url": "https://valleyvoice.example.org/2026/10/four-day-school-week",
+    "title": "A four-day school week would cost Cedar Valley students more than it saves",
+    "source": "Valley Voice (mock)",
+    "author": "Daniel Reyes",
+    "published_at": "2026-10-29",
+    "section": "Opinion",
+    "word_count": 163,
+    "truncated": false,
+    "is_mock": true,
+    "text": "The Cedar Valley school board’s plan to move twelve rural schools to a four-day week is a mistake that students will pay for. The board calls it a cost-saving pilot, but the savings are small and the learning losses are not.\n\nBoard staff project savings of $1.4 million a year, mostly from busing and custodial costs. That is less than one percent of the district’s $210 million operating budget.\n\nMeanwhile, a multi-year study of four-day districts cited in the board’s own report found measurable declines in math scores by the third year. Students from lower-income families saw the largest drops, partly because they lose access to school meals on the fifth day.\n\nSupporters say the schedule will help recruit teachers, and two neighbouring districts did report more applicants after switching. Still, a recruitment bump does little if the students those teachers serve fall further behind.\n\nThe board should pause the pilot and publish a full impact assessment before any school changes its calendar."
+  },
+  "main_claim_id": "C1",
+  "components": [
+    {
+      "id": "C1",
+      "type": "claim",
+      "start": 0,
+      "end": 124,
+      "text": "The Cedar Valley school board’s plan to move twelve rural schools to a four-day week is a mistake that students will pay for",
+      "confidence": 0.91
+    },
+    {
+      "id": "C2",
+      "type": "claim",
+      "start": 170,
+      "end": 223,
+      "text": "the savings are small and the learning losses are not",
+      "confidence": 0.78
+    },
+    {
+      "id": "P1",
+      "type": "premise",
+      "start": 318,
+      "end": 395,
+      "text": "That is less than one percent of the district’s $210 million operating budget",
+      "confidence": 0.83
+    },
+    {
+      "id": "P2",
+      "type": "premise",
+      "start": 409,
+      "end": 540,
+      "text": "a multi-year study of four-day districts cited in the board’s own report found measurable declines in math scores by the third year",
+      "confidence": 0.87
+    },
+    {
+      "id": "P2.1",
+      "type": "premise",
+      "start": 542,
+      "end": 665,
+      "text": "Students from lower-income families saw the largest drops, partly because they lose access to school meals on the fifth day",
+      "confidence": 0.74
+    },
+    {
+      "id": "P3",
+      "type": "premise",
+      "start": 683,
+      "end": 722,
+      "text": "the schedule will help recruit teachers",
+      "confidence": 0.8
+    },
+    {
+      "id": "P3.1",
+      "type": "premise",
+      "start": 728,
+      "end": 797,
+      "text": "two neighbouring districts did report more applicants after switching",
+      "confidence": 0.76
+    },
+    {
+      "id": "P3.2",
+      "type": "premise",
+      "start": 806,
+      "end": 893,
+      "text": "a recruitment bump does little if the students those teachers serve fall further behind",
+      "confidence": 0.7
+    },
+    {
+      "id": "C3",
+      "type": "claim",
+      "start": 896,
+      "end": 1004,
+      "text": "The board should pause the pilot and publish a full impact assessment before any school changes its calendar",
+      "confidence": 0.72
+    }
+  ],
+  "relations": [
+    {
+      "id": "R1",
+      "source": "C2",
+      "target": "C1",
+      "type": "support",
+      "confidence": 0.84
+    },
+    {
+      "id": "R2",
+      "source": "P1",
+      "target": "C2",
+      "type": "support",
+      "confidence": 0.79
+    },
+    {
+      "id": "R3",
+      "source": "P2",
+      "target": "C2",
+      "type": "support",
+      "confidence": 0.86
+    },
+    {
+      "id": "R4",
+      "source": "P2.1",
+      "target": "P2",
+      "type": "support",
+      "confidence": 0.68
+    },
+    {
+      "id": "R5",
+      "source": "P3",
+      "target": "C1",
+      "type": "attack",
+      "confidence": 0.83
+    },
+    {
+      "id": "R6",
+      "source": "P3.1",
+      "target": "P3",
+      "type": "support",
+      "confidence": 0.77
+    },
+    {
+      "id": "R7",
+      "source": "P3.2",
+      "target": "P3",
+      "type": "attack",
+      "confidence": 0.69
+    },
+    {
+      "id": "R8",
+      "source": "C3",
+      "target": "C1",
+      "type": "support",
+      "confidence": 0.58
+    }
+  ],
+  "suggested_queries": [
+    "four-day school week student achievement study",
+    "Cedar Valley school board four-day week pilot report",
+    "four-day school week teacher recruitment results",
+    "school meal access four-day week low-income students"
+  ]
+}

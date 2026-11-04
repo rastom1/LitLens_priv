@@ -1,0 +1,206 @@
+@import "tailwindcss";
+@import "@fontsource-variable/space-grotesk";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/jetbrains-mono";
+@import "@fontsource-variable/newsreader";
+@import "@fontsource-variable/newsreader/wght-italic.css";
+
+/* ------------------------------------------------------------------
+   Tokens. Dark is the default; light applies when the OS asks for it
+   (and no explicit choice was made) or when data-theme="light".
+   *-ink is for text and borders, the bare colour is for fills/tints.
+   ------------------------------------------------------------------ */
+:root {
+  --bg: oklch(0.145 0.008 265);
+  --surface: oklch(0.178 0.009 265);
+  --elevated: oklch(0.215 0.01 265);
+  --hover: oklch(0.245 0.012 265);
+  --border: oklch(0.27 0.012 265);
+  --border-strong: oklch(0.37 0.014 265);
+  --fg: oklch(0.96 0.003 265);
+  --fg-2: oklch(0.74 0.01 265);
+  --fg-3: oklch(0.55 0.012 265);
+
+  --claim: oklch(0.89 0.17 102);
+  --claim-ink: oklch(0.9 0.16 102);
+  --on-claim: oklch(0.2 0.03 100);
+  --support: oklch(0.74 0.16 155);
+  --support-ink: oklch(0.79 0.15 155);
+  --attack: oklch(0.68 0.19 27);
+  --attack-ink: oklch(0.74 0.17 27);
+  --caution: oklch(0.79 0.13 62);
+  --link: oklch(0.78 0.11 230);
+
+  --shadow-pop: 0 24px 60px -20px oklch(0 0 0 / 0.7), 0 0 0 1px oklch(1 0 0 / 0.04);
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: oklch(0.968 0.004 265);
+    --surface: oklch(0.995 0.002 265);
+    --elevated: oklch(0.955 0.005 265);
+    --hover: oklch(0.935 0.006 265);
+    --border: oklch(0.9 0.006 265);
+    --border-strong: oklch(0.8 0.01 265);
+    --fg: oklch(0.2 0.012 265);
+    --fg-2: oklch(0.43 0.012 265);
+    --fg-3: oklch(0.58 0.012 265);
+    --claim-ink: oklch(0.52 0.12 100);
+    --support-ink: oklch(0.5 0.13 155);
+    --attack-ink: oklch(0.54 0.19 27);
+    --caution: oklch(0.6 0.14 62);
+    --link: oklch(0.5 0.14 245);
+    --shadow-pop: 0 24px 60px -24px oklch(0.3 0.02 265 / 0.35), 0 0 0 1px oklch(0 0 0 / 0.05);
+    color-scheme: light;
+  }
+}
+:root[data-theme="light"] {
+  --bg: oklch(0.968 0.004 265);
+  --surface: oklch(0.995 0.002 265);
+  --elevated: oklch(0.955 0.005 265);
+  --hover: oklch(0.935 0.006 265);
+  --border: oklch(0.9 0.006 265);
+  --border-strong: oklch(0.8 0.01 265);
+  --fg: oklch(0.2 0.012 265);
+  --fg-2: oklch(0.43 0.012 265);
+  --fg-3: oklch(0.58 0.012 265);
+  --claim-ink: oklch(0.52 0.12 100);
+  --support-ink: oklch(0.5 0.13 155);
+  --attack-ink: oklch(0.54 0.19 27);
+  --caution: oklch(0.6 0.14 62);
+  --link: oklch(0.5 0.14 245);
+  --shadow-pop: 0 24px 60px -24px oklch(0.3 0.02 265 / 0.35), 0 0 0 1px oklch(0 0 0 / 0.05);
+  color-scheme: light;
+}
+
+@theme {
+  --font-display: "Space Grotesk Variable", ui-sans-serif, sans-serif;
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, Menlo, monospace;
+  --font-read: "Newsreader Variable", "Iowan Old Style", Georgia, serif;
+
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-elevated: var(--elevated);
+  --color-hover: var(--hover);
+  --color-line: var(--border);
+  --color-line-strong: var(--border-strong);
+  --color-fg: var(--fg);
+  --color-fg-2: var(--fg-2);
+  --color-fg-3: var(--fg-3);
+  --color-claim: var(--claim);
+  --color-claim-ink: var(--claim-ink);
+  --color-on-claim: var(--on-claim);
+  --color-support: var(--support);
+  --color-support-ink: var(--support-ink);
+  --color-attack: var(--attack);
+  --color-attack-ink: var(--attack-ink);
+  --color-caution: var(--caution);
+  --color-link: var(--link);
+
+  --animate-sweep: sweep 0.55s cubic-bezier(0.3, 0.7, 0.2, 1) both;
+  --animate-rise: rise 0.4s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes sweep {
+  from { background-size: 0% 100%; }
+  to { background-size: 100% 100%; }
+}
+@keyframes rise {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes pulse-ring {
+  0%, 100% { box-shadow: 0 0 0 2px var(--paper-ink); }
+  50% { box-shadow: 0 0 0 6px color-mix(in oklch, var(--paper-ink) 25%, transparent); }
+}
+
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+:focus-visible { outline: 2px solid var(--claim-ink); outline-offset: 2px; }
+::selection { background: color-mix(in oklch, var(--claim) 45%, transparent); }
+
+/* Thin scrollbars that match the UI. */
+* { scrollbar-width: thin; scrollbar-color: var(--border-strong) transparent; }
+
+/* ------------------------------------------------------------------
+   The simulated web page in the walkthrough is always "paper": a
+   third-party site does not follow LitLens's theme.
+   ------------------------------------------------------------------ */
+.paper {
+  --paper: oklch(0.988 0.004 85);
+  --paper-ink: oklch(0.21 0.012 265);
+  --paper-muted: oklch(0.5 0.012 265);
+  --paper-line: oklch(0.9 0.008 85);
+  --hl-claim: oklch(0.93 0.13 102);
+  --hl-support: oklch(0.92 0.07 155);
+  --hl-attack: oklch(0.91 0.07 27);
+  --ul-claim: oklch(0.62 0.14 100);
+  --ul-support: oklch(0.55 0.14 155);
+  --ul-attack: oklch(0.58 0.19 27);
+  background: var(--paper);
+  color: var(--paper-ink);
+  color-scheme: light;
+}
+
+/* Highlights in the article (walkthrough). The content script ships its
+   own copy of these rules in public/content.css for real pages. */
+mark.ll {
+  color: inherit;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 1px 2px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  background-color: transparent;
+  background-image: linear-gradient(var(--hl), var(--hl));
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  text-decoration-color: var(--ul);
+  transition: opacity 0.2s, box-shadow 0.15s;
+  animation: var(--animate-sweep);
+  animation-delay: calc(var(--i, 0) * 110ms + 150ms);
+}
+mark.ll.main { --hl: var(--hl-claim); --ul: var(--ul-claim); text-decoration-thickness: 3px; }
+mark.ll.support { --hl: var(--hl-support); --ul: var(--ul-support); }
+mark.ll.attack { --hl: var(--hl-attack); --ul: var(--ul-attack); text-decoration-style: wavy; text-decoration-thickness: 1.5px; }
+mark.ll.none { --hl: oklch(0.94 0.01 265); --ul: var(--paper-muted); text-decoration-style: dotted; }
+mark.ll.low {
+  background-image:
+    repeating-linear-gradient(135deg, transparent 0 5px, oklch(0.7 0.12 62 / 0.28) 5px 7px),
+    linear-gradient(var(--hl), var(--hl));
+}
+mark.ll .code {
+  font: 600 10.5px/1 var(--font-mono);
+  letter-spacing: 0.02em;
+  padding: 2px 4px;
+  margin-right: 5px;
+  border-radius: 3px;
+  vertical-align: 0.2em;
+  background: var(--paper);
+  color: var(--ul);
+  box-shadow: inset 0 0 0 1px currentColor;
+}
+mark.ll.is-hover, mark.ll.is-active { box-shadow: 0 0 0 2px var(--paper-ink); }
+mark.ll.is-path:not(.is-active) { box-shadow: 0 0 0 1.5px var(--paper-muted); }
+mark.ll.is-flash { animation: pulse-ring 0.7s ease 2; }
+.is-focusing mark.ll:not(.is-active):not(.is-related):not(.is-path) { opacity: 0.32; }
+.is-plain mark.ll { background-image: none; text-decoration-line: none; cursor: text; }
+.is-plain mark.ll .code { display: none; }
+[data-filter="support"] mark.ll.attack, [data-filter="attack"] mark.ll.support { opacity: 0.3; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-delay: 0ms !important; transition-duration: 0.01ms !important; }
+}

@@ -1,0 +1,45 @@
+/* Elbow connectors for the argument tree. Each <li> draws its own segment of
+   the vertical spine (::before) and an elbow into its card (::after). */
+.ll-tree,
+.ll-tree ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ll-tree ul {
+  margin-left: 14px;
+}
+.ll-tree li {
+  position: relative;
+  padding: 8px 0 0 20px;
+}
+.ll-tree li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-left: 1.5px solid var(--border-strong);
+}
+.ll-tree li:last-child::before {
+  bottom: auto;
+  height: 29px;
+}
+.ll-tree li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 28px;
+  width: 16px;
+  height: 0;
+  border-top: 2px solid var(--border-strong);
+}
+.ll-tree li[data-rel="support"]::after {
+  border-top-color: var(--support);
+}
+.ll-tree li[data-rel="attack"]::after {
+  border-top: 2px dashed var(--attack);
+}
+.ll-tree li.on-path::after {
+  border-top-width: 3px;
+}

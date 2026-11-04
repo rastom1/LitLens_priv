@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "LitLens",
+  "version": "0.1.0",
+  "description": "Maps the argument in a news article: the main claim, and the premises that support or attack it.",
+  "action": { "default_title": "Open LitLens" },
+  "side_panel": { "default_path": "sidepanel.html" },
+  "background": { "service_worker": "background.js", "type": "module" },
+  "permissions": ["sidePanel", "scripting", "activeTab", "tabs"],
+  "host_permissions": ["<all_urls>"]
+}
