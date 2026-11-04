@@ -1,0 +1,329 @@
+{
+  "schema_version": "1.0",
+  "request_id": "req_c5e0d713",
+  "status": "complete",
+  "model": {
+    "name": "litlens-bert-adapter",
+    "version": "0.3.1-mock",
+    "component_head": "claim/premise/none",
+    "relation_head": "support/attack/none"
+  },
+  "latency_ms": 3967,
+  "warnings": [
+    {
+      "code": "LOW_CONFIDENCE",
+      "message": "1 component and 2 relations scored below 0.60.",
+      "ids": [
+        "P1",
+        "R1",
+        "R15"
+      ]
+    },
+    {
+      "code": "QUOTED_SOURCE",
+      "message": "Most premises are quotes from one official. Look for independent sources."
+    }
+  ],
+  "article": {
+    "url": "https://editorials.voa.gov/a/exposing-the-cuban-regime-s-lies/8215450.html",
+    "title": "Exposing the Cuban Regime's Lies",
+    "source": "VOA Editorials",
+    "author": "VOA Editorials",
+    "published_at": "2026-10-27",
+    "section": "Americas",
+    "is_mock": false,
+    "license": "U.S. Government work (public domain). Text copied from the original page; the photo is not included.",
+    "word_count": 433,
+    "truncated": false,
+    "text": "“For 67 years the Castro regime has sold the world a myth,” said U.S. Ambassador to the United Nations Mike Waltz.\n\n“The lie is that the revolution liberated Cuba. ... But the truth is, the Cuban people have been hostages on their own land ever since Fidel Castro seized power in 1959.”\n\nCastro’s so-called revolution began with hundreds of executions by firing squad. Then came forced labor camps, which held Christians, gay Cubans, Afro-Cubans, and anyone else the regime felt threatened their iron grip.\n\nIn the years since, more than a million Cubans have fled to America’s shores, many risking their lives on rafts crossing the Florida straits. Countless others tried to escape and never made it. Millions more stayed behind and had to live with the reality that speaking their minds could cost them their freedom.\n\n“Today, more than 800 political prisoners languish in Cuban prisons,” said Ambassador Waltz. They include artists, pastors, students, mothers and fathers, whose only “crime” was exercising their fundamental right to freedom of expression.\n\n“Meanwhile, those lucky enough to avoid prison still live in prison-like conditions, with empty shelves, sky-high prices for basically everything with blackouts lasting days,” noted Ambassador Waltz.\n\nCuba lauds its free healthcare, but it doesn’t mean much when there is no medicine and no electricity to keep patients alive.\n\nIronically, the Cuban regime can’t find enough power for its hospitals, schools, or people’s homes, but it has enough power for its prisons, said Ambassador Waltz. “It has enough power for the Castro family compounds. It has enough power for a private jet to fly regime relatives back and forth to countries in Latin America and to Spain. They have enough power for intelligence collection sites with some of our adversaries.”\n\nTo understand how the regime affords to live in such opulence, one need merely follow the money. It leads straight to GAESA, the regime’s military-run, corrupt conglomerate, which controls huge portions of Cuba’s economy, explained Ambassador Waltz. GAESA’s secret financial records reveal a staggering $18 billion in current assets. Its tourism subsidiary alone held $4.3 billion, nearly 13 times what Havana said it needed to stock Cuban pharmacies for an entire year.\n\nThe Cuban regime has also resorted to modern day slavery and forced labor to fund its excesses. It has made billions on so-called medical missions, where the regime ships Cuban doctors and nurses around the world and then confiscates their wages.\n\nHavana has spent decades telling the world a massive lie. The truth is the situation inside Cuba is bad and getting worse. Now is the time to expose the truth."
+  },
+  "main_claim_id": "C1",
+  "components": [
+    {
+      "id": "P1",
+      "type": "premise",
+      "start": 1,
+      "end": 57,
+      "text": "For 67 years the Castro regime has sold the world a myth",
+      "confidence": 0.57
+    },
+    {
+      "id": "C2",
+      "type": "claim",
+      "start": 133,
+      "end": 162,
+      "text": "the revolution liberated Cuba",
+      "confidence": 0.71
+    },
+    {
+      "id": "P2",
+      "type": "premise",
+      "start": 186,
+      "end": 284,
+      "text": "the Cuban people have been hostages on their own land ever since Fidel Castro seized power in 1959",
+      "confidence": 0.84
+    },
+    {
+      "id": "P2.1",
+      "type": "premise",
+      "start": 288,
+      "end": 367,
+      "text": "Castro’s so-called revolution began with hundreds of executions by firing squad",
+      "confidence": 0.82
+    },
+    {
+      "id": "P2.2",
+      "type": "premise",
+      "start": 369,
+      "end": 505,
+      "text": "Then came forced labor camps, which held Christians, gay Cubans, Afro-Cubans, and anyone else the regime felt threatened their iron grip",
+      "confidence": 0.78
+    },
+    {
+      "id": "P2.3",
+      "type": "premise",
+      "start": 528,
+      "end": 648,
+      "text": "more than a million Cubans have fled to America’s shores, many risking their lives on rafts crossing the Florida straits",
+      "confidence": 0.74
+    },
+    {
+      "id": "P2.4",
+      "type": "premise",
+      "start": 822,
+      "end": 888,
+      "text": "Today, more than 800 political prisoners languish in Cuban prisons",
+      "confidence": 0.88
+    },
+    {
+      "id": "P3",
+      "type": "premise",
+      "start": 1073,
+      "end": 1234,
+      "text": "those lucky enough to avoid prison still live in prison-like conditions, with empty shelves, sky-high prices for basically everything with blackouts lasting days",
+      "confidence": 0.83
+    },
+    {
+      "id": "C3",
+      "type": "claim",
+      "start": 1262,
+      "end": 1292,
+      "text": "Cuba lauds its free healthcare",
+      "confidence": 0.62
+    },
+    {
+      "id": "P4",
+      "type": "premise",
+      "start": 1298,
+      "end": 1386,
+      "text": "it doesn’t mean much when there is no medicine and no electricity to keep patients alive",
+      "confidence": 0.79
+    },
+    {
+      "id": "C4",
+      "type": "claim",
+      "start": 1401,
+      "end": 1528,
+      "text": "the Cuban regime can’t find enough power for its hospitals, schools, or people’s homes, but it has enough power for its prisons",
+      "confidence": 0.68
+    },
+    {
+      "id": "P5",
+      "type": "premise",
+      "start": 1554,
+      "end": 1605,
+      "text": "It has enough power for the Castro family compounds",
+      "confidence": 0.66
+    },
+    {
+      "id": "P6",
+      "type": "premise",
+      "start": 1607,
+      "end": 1726,
+      "text": "It has enough power for a private jet to fly regime relatives back and forth to countries in Latin America and to Spain",
+      "confidence": 0.64
+    },
+    {
+      "id": "P7",
+      "type": "premise",
+      "start": 2067,
+      "end": 2149,
+      "text": "GAESA’s secret financial records reveal a staggering $18 billion in current assets",
+      "confidence": 0.81
+    },
+    {
+      "id": "P7.1",
+      "type": "premise",
+      "start": 2151,
+      "end": 2286,
+      "text": "Its tourism subsidiary alone held $4.3 billion, nearly 13 times what Havana said it needed to stock Cuban pharmacies for an entire year",
+      "confidence": 0.77
+    },
+    {
+      "id": "C5",
+      "type": "claim",
+      "start": 2289,
+      "end": 2383,
+      "text": "The Cuban regime has also resorted to modern day slavery and forced labor to fund its excesses",
+      "confidence": 0.72
+    },
+    {
+      "id": "P8",
+      "type": "premise",
+      "start": 2385,
+      "end": 2534,
+      "text": "It has made billions on so-called medical missions, where the regime ships Cuban doctors and nurses around the world and then confiscates their wages",
+      "confidence": 0.75
+    },
+    {
+      "id": "C1",
+      "type": "claim",
+      "start": 2537,
+      "end": 2593,
+      "text": "Havana has spent decades telling the world a massive lie",
+      "confidence": 0.86
+    },
+    {
+      "id": "C6",
+      "type": "claim",
+      "start": 2608,
+      "end": 2658,
+      "text": "the situation inside Cuba is bad and getting worse",
+      "confidence": 0.8
+    }
+  ],
+  "relations": [
+    {
+      "id": "R1",
+      "source": "P1",
+      "target": "C1",
+      "type": "support",
+      "confidence": 0.58
+    },
+    {
+      "id": "R2",
+      "source": "C2",
+      "target": "C1",
+      "type": "attack",
+      "confidence": 0.73
+    },
+    {
+      "id": "R3",
+      "source": "P2",
+      "target": "C2",
+      "type": "attack",
+      "confidence": 0.86
+    },
+    {
+      "id": "R4",
+      "source": "P2.1",
+      "target": "P2",
+      "type": "support",
+      "confidence": 0.8
+    },
+    {
+      "id": "R5",
+      "source": "P2.2",
+      "target": "P2",
+      "type": "support",
+      "confidence": 0.77
+    },
+    {
+      "id": "R6",
+      "source": "P2.3",
+      "target": "P2",
+      "type": "support",
+      "confidence": 0.66
+    },
+    {
+      "id": "R7",
+      "source": "P2.4",
+      "target": "P2",
+      "type": "support",
+      "confidence": 0.79
+    },
+    {
+      "id": "R8",
+      "source": "C6",
+      "target": "C1",
+      "type": "support",
+      "confidence": 0.78
+    },
+    {
+      "id": "R9",
+      "source": "P3",
+      "target": "C6",
+      "type": "support",
+      "confidence": 0.84
+    },
+    {
+      "id": "R10",
+      "source": "C3",
+      "target": "C1",
+      "type": "attack",
+      "confidence": 0.64
+    },
+    {
+      "id": "R11",
+      "source": "P4",
+      "target": "C3",
+      "type": "attack",
+      "confidence": 0.82
+    },
+    {
+      "id": "R12",
+      "source": "C4",
+      "target": "C1",
+      "type": "support",
+      "confidence": 0.61
+    },
+    {
+      "id": "R13",
+      "source": "P5",
+      "target": "C4",
+      "type": "support",
+      "confidence": 0.7
+    },
+    {
+      "id": "R14",
+      "source": "P6",
+      "target": "C4",
+      "type": "support",
+      "confidence": 0.67
+    },
+    {
+      "id": "R15",
+      "source": "P7",
+      "target": "C4",
+      "type": "support",
+      "confidence": 0.59
+    },
+    {
+      "id": "R16",
+      "source": "P7.1",
+      "target": "P7",
+      "type": "support",
+      "confidence": 0.74
+    },
+    {
+      "id": "R17",
+      "source": "C5",
+      "target": "C1",
+      "type": "support",
+      "confidence": 0.69
+    },
+    {
+      "id": "R18",
+      "source": "P8",
+      "target": "C5",
+      "type": "support",
+      "confidence": 0.8
+    }
+  ],
+  "suggested_queries": [
+    "GAESA leaked financial records $18 billion assets",
+    "Cuba political prisoners number 2026",
+    "Cuba national grid collapse blackouts 2026",
+    "Cuban medical missions doctors wages confiscated"
+  ]
+}

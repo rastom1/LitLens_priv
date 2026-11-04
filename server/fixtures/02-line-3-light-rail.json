@@ -1,0 +1,218 @@
+{
+  "schema_version": "1.0",
+  "request_id": "req_7f3a91c2",
+  "status": "complete",
+  "model": {
+    "name": "litlens-bert-adapter",
+    "version": "0.3.1-mock",
+    "component_head": "claim/premise/none",
+    "relation_head": "support/attack/none"
+  },
+  "latency_ms": 3412,
+  "warnings": [
+    {
+      "code": "LOW_CONFIDENCE",
+      "message": "1 component and 1 relation scored below 0.60.",
+      "ids": [
+        "P5",
+        "R11"
+      ]
+    }
+  ],
+  "article": {
+    "url": "https://ledger.example.com/opinion/2026/11/line-3-light-rail",
+    "title": "Port Alder should build Line 3, even with a transit levy",
+    "source": "Port Alder Ledger (mock)",
+    "author": "Mira Okafor",
+    "published_at": "2026-11-02",
+    "section": "Opinion",
+    "word_count": 200,
+    "truncated": false,
+    "is_mock": true,
+    "text": "Port Alder council should approve the Line 3 light rail extension next month, even if it means a modest transit levy on property taxes. The east end has waited two decades for reliable transit, and the cost of waiting keeps rising.\n\nCommuters on the 41 bus already spend an average of 52 minutes getting downtown, according to the city’s 2025 mobility survey. A rail line would cut that trip to roughly 24 minutes. Faster trips matter because they widen the number of jobs a resident can realistically reach in an hour.\n\nCritics argue that the levy, estimated at $118 a year for a typical household, will hurt families already squeezed by rent. That concern is real. Yet the city’s own analysis shows the average east-end household spends over $9,000 a year on car ownership, and even modest car-free gains would outweigh the levy.\n\nOthers point to the 2019 Bayline project, which ran 40 percent over budget. But Line 3 uses a fixed-price contract, and the province has already committed to covering any overruns above 10 percent.\n\nCouncil members who vote no will not save residents money. They will simply move the bill to the next council, at a higher price."
+  },
+  "main_claim_id": "C1",
+  "components": [
+    {
+      "id": "C1",
+      "type": "claim",
+      "start": 0,
+      "end": 134,
+      "text": "Port Alder council should approve the Line 3 light rail extension next month, even if it means a modest transit levy on property taxes",
+      "confidence": 0.93
+    },
+    {
+      "id": "P1",
+      "type": "premise",
+      "start": 136,
+      "end": 230,
+      "text": "The east end has waited two decades for reliable transit, and the cost of waiting keeps rising",
+      "confidence": 0.81
+    },
+    {
+      "id": "P2.1",
+      "type": "premise",
+      "start": 233,
+      "end": 358,
+      "text": "Commuters on the 41 bus already spend an average of 52 minutes getting downtown, according to the city’s 2025 mobility survey",
+      "confidence": 0.86
+    },
+    {
+      "id": "P2",
+      "type": "premise",
+      "start": 360,
+      "end": 413,
+      "text": "A rail line would cut that trip to roughly 24 minutes",
+      "confidence": 0.88
+    },
+    {
+      "id": "P2.2",
+      "type": "premise",
+      "start": 415,
+      "end": 518,
+      "text": "Faster trips matter because they widen the number of jobs a resident can realistically reach in an hour",
+      "confidence": 0.77
+    },
+    {
+      "id": "P3",
+      "type": "premise",
+      "start": 540,
+      "end": 643,
+      "text": "the levy, estimated at $118 a year for a typical household, will hurt families already squeezed by rent",
+      "confidence": 0.84
+    },
+    {
+      "id": "P3.1",
+      "type": "premise",
+      "start": 701,
+      "end": 830,
+      "text": "the average east-end household spends over $9,000 a year on car ownership, and even modest car-free gains would outweigh the levy",
+      "confidence": 0.79
+    },
+    {
+      "id": "P4",
+      "type": "premise",
+      "start": 849,
+      "end": 907,
+      "text": "the 2019 Bayline project, which ran 40 percent over budget",
+      "confidence": 0.72
+    },
+    {
+      "id": "P4.1",
+      "type": "premise",
+      "start": 913,
+      "end": 947,
+      "text": "Line 3 uses a fixed-price contract",
+      "confidence": 0.83
+    },
+    {
+      "id": "P4.2",
+      "type": "premise",
+      "start": 953,
+      "end": 1029,
+      "text": "the province has already committed to covering any overruns above 10 percent",
+      "confidence": 0.8
+    },
+    {
+      "id": "C2",
+      "type": "claim",
+      "start": 1032,
+      "end": 1089,
+      "text": "Council members who vote no will not save residents money",
+      "confidence": 0.69
+    },
+    {
+      "id": "P5",
+      "type": "premise",
+      "start": 1091,
+      "end": 1160,
+      "text": "They will simply move the bill to the next council, at a higher price",
+      "confidence": 0.54
+    }
+  ],
+  "relations": [
+    {
+      "id": "R1",
+      "source": "P1",
+      "target": "C1",
+      "type": "support",
+      "confidence": 0.82
+    },
+    {
+      "id": "R2",
+      "source": "P2",
+      "target": "C1",
+      "type": "support",
+      "confidence": 0.9
+    },
+    {
+      "id": "R3",
+      "source": "P2.1",
+      "target": "P2",
+      "type": "support",
+      "confidence": 0.85
+    },
+    {
+      "id": "R4",
+      "source": "P2.2",
+      "target": "P2",
+      "type": "support",
+      "confidence": 0.74
+    },
+    {
+      "id": "R5",
+      "source": "P3",
+      "target": "C1",
+      "type": "attack",
+      "confidence": 0.87
+    },
+    {
+      "id": "R6",
+      "source": "P3.1",
+      "target": "P3",
+      "type": "attack",
+      "confidence": 0.71
+    },
+    {
+      "id": "R7",
+      "source": "P4",
+      "target": "C1",
+      "type": "attack",
+      "confidence": 0.76
+    },
+    {
+      "id": "R8",
+      "source": "P4.1",
+      "target": "P4",
+      "type": "attack",
+      "confidence": 0.81
+    },
+    {
+      "id": "R9",
+      "source": "P4.2",
+      "target": "P4",
+      "type": "attack",
+      "confidence": 0.78
+    },
+    {
+      "id": "R10",
+      "source": "C2",
+      "target": "C1",
+      "type": "support",
+      "confidence": 0.66
+    },
+    {
+      "id": "R11",
+      "source": "P5",
+      "target": "C2",
+      "type": "support",
+      "confidence": 0.57
+    }
+  ],
+  "suggested_queries": [
+    "Port Alder Line 3 light rail fixed-price contract",
+    "Bayline project 2019 cost overrun final report",
+    "average household car ownership cost Canada 2025",
+    "transit levy property tax impact on renters"
+  ]
+}
